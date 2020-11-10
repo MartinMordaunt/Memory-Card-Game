@@ -1,0 +1,91 @@
+.container{
+    width:100%;
+
+}
+h2{
+    text-align:center;
+    width:100%;
+}
+#seconds{
+    text-align:center;
+    display:inline-block;
+}
+.cardsDiv{
+    float:left;
+    width:70%;
+    height:600px;
+    /* margin-right: auto; */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-content:space-between;
+
+}
+.zone{
+    /* display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    height:30%;
+    width:22%;
+    text-align: center;
+    font-size:4rem;
+    border: 2px solid lightslategrey;
+    border-radius:50px;
+    box-sizing: border-box;
+    cursor: pointer; */
+}
+.buttonsDiv{
+    /* float:bottom; */
+    width:100%;
+    text-align: center;
+}
+.button{
+    margin:5px;
+    margin-top:30px;
+    border-radius: 25px;
+    padding:10px 20px;
+    background:lightslategray;
+    color:#FFF;
+    border:none;
+    cursor: pointer;
+    outline:none;
+}
+.toFindDiv{
+    float:right;
+    width:28%;
+    height:600px;
+    /* margin-left: auto; */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-content:space-between;
+}
+.findZone{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    height:30%;
+    width:100%;
+    text-align: center;
+    font-size:4rem;
+    border: 2px solid lightslategrey;
+    border-radius:50px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.parent{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    height:30%;
+    width:22%;
+    text-align: center;
+    font-size:4rem;
+    border: 2px solid lightslategrey;
+    border-radius:50px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
