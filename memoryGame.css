@@ -13,7 +13,7 @@ h2{
 .cardsDiv{
     float:left;
     width:70%;
-    height:600px;
+    height:500px;
     /* margin-right: auto; */
     display:flex;
     flex-wrap:wrap;
@@ -54,11 +54,11 @@ h2{
 .toFindDiv{
     float:right;
     width:28%;
-    height:600px;
+    height:500px;
     /* margin-left: auto; */
     display:flex;
     flex-wrap:wrap;
-    justify-content:space-between;
+    justify-content:center;
     align-content:space-between;
 }
 .findZone{
@@ -66,8 +66,8 @@ h2{
     flex-wrap:wrap;
     justify-content: center;
     align-items:center;
-    height:30%;
-    width:100%;
+    height:28%;
+    width:60%;
     text-align: center;
     font-size:4rem;
     border: 2px solid lightslategrey;
@@ -80,7 +80,7 @@ h2{
     flex-wrap:wrap;
     justify-content: center;
     align-items:center;
-    height:30%;
+    height:28%;
     width:22%;
     text-align: center;
     font-size:4rem;
@@ -88,4 +88,5 @@ h2{
     border-radius:50px;
     box-sizing: border-box;
     cursor: pointer;
+    background:lightgreen;
 }
