@@ -7,4 +7,5 @@ It is still a Work In Progress. Things I plan to add:
 
 * Improved CSS/Design
 * A Score Board/ Tally of points(times you guessed the right card)
-* A difficulty setting that will change amount of time to see where cards are
+* A difficulty setting/button that will change the amount of time to see where the cards are placed
+
