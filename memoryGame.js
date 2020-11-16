@@ -117,34 +117,81 @@ let animalNums = [
 
 ]
 
-//My Try At randomising without duplicates : lol
-// function randomiseCards(){
-//     for(let i=0; i < cardArray.length; i++){
-//         let rndmNum = Math.floor(Math.random() * 12)
-//         newCardArray.push(rndmNum)
-//         console.log(newCardArray)
-//     }
-// }
-// replaced in for loop below,  animalNums[i].animal
+let findArray = [ 
+    {
+       div: document.getElementById("findOne")
+    },
+    {
+       div: document.getElementById("findTwo")
+    },
+    {
+       div: document.getElementById("findThree")
+    }
+]
 
-// First way of creating random non duplicating numbers 
-//     function randomiseCards(){
-//         var nums = [0,1,2,3,4,5,6,7,8,9,10,11],
-//             newCardArray = [],
-//             i = nums.length,
-//             j = 0;
+let findAnimalNums = [
+    {
+        animal: document.innerHTML = "🦊",
+        num: 0
 
-//         while (i--) {
-//             j = Math.floor(Math.random() * (i+1));
-//             newCardArray.push(nums[j]);
-//             nums.splice(j,1);
-//         }
-//         console.log(newCardArray);
-//     }
-// randomiseCards();
+    },
+    {
+        animal: document.innerHTML = "🐰",
+        num: 1
 
+    },
+    {
+        animal: document.innerHTML = "🐸",
+        num: 2
 
+    },
+    {
+        animal: document.innerHTML = "🦁",
+        num: 3
 
+    },
+    {
+        animal: document.innerHTML = "🐯",
+        num: 4
+
+    },
+    {
+        animal: document.innerHTML = "🐭",
+        num: 5
+
+    },
+    {
+        animal: document.innerHTML = "🦄",
+        num: 6
+
+    },
+    {
+        animal: document.innerHTML = "🐲",
+        num: 7
+
+    },
+    {
+        animal: document.innerHTML = "🐷",
+        num: 8
+
+    },
+    {
+        animal: document.innerHTML = "🐺",
+        num: 9
+
+    },
+    {
+        animal: document.innerHTML = "🐼",
+        num: 10
+
+    },
+    {
+        animal: document.innerHTML = "🐻",
+        num: 11
+
+    }
+
+]
 
 
 function shuffle(array) {
@@ -178,27 +225,75 @@ function shuffle(array) {
         divArray[i].div.append(animalNums[i].animal);
     }
 }
-// function disappearCards(){
-//     for(i = 0; i < divArray.length; i++){
-//         divArray[i].div.style.display = "none";
+// Same with this. Not working for some reason so we have to do it manually for time being
+// function findCardsInPlace(){
+//     for(let i =0; i < 4; i++){
+//         findArray[i].div.append(findAnimalNums[i].animal);
 //     }
 // }
-// function disappearCardsTimer(){ 
-//     setTimeout(disappearCards,10000);
+ function findCardsInPlace(){
+     findArray[0].div.append(findAnimalNums[0].animal);
+     findArray[1].div.append(findAnimalNums[1].animal);
+     findArray[2].div.append(findAnimalNums[2].animal);
+ }
+
+// Could not use this due to cannot read property of undefined error ;( 
+// i think its something to do with the findArray because it works with divArray  
+// function clearFindDivs(){ 
+//     for(let i = 0; i < 4; i++){
+//         findArray[i].div.innerHTML = "";
+//     } 
 // }
-
-
 
 
   start.addEventListener("click",startGame)
-
+let value = 10;
 function startGame(){
     shuffle(animalNums);
-    cardsInPlace()
+    cardsInPlace();
+    findArray[0].div.innerHTML = "";
+    findArray[1].div.innerHTML = "";
+    findArray[2].div.innerHTML = "";
     setTimeout(function(){
+        shuffle(findAnimalNums);
+        findCardsInPlace();
         for(i = 0; i < animalNums.length; i++){
         animalNums[i].animal.style.display = "none";
     }},10000);
-    gameStatus.textContent = "Memorize the Cards, You have 10 Seconds!"
-    
+    let valueChange = setInterval(function(){ value = value - 1 },1000);
+    // gameStatus.textContent = "Memorize the Cards, You have 10 Seconds!"
+    let updateValue = setInterval(function(){ gameStatus.innerHTML = "<span>Memorize the Cards. You have " + value + " seconds </span>" },1000);
+    setTimeout(function(){
+        clearInterval(valueChange)
+        clearInterval(updateValue)
+    },10000)
 }
+
+// I THINK MAYBE E.TARGET MIGHT NEED TO BE USED FOR MATCHING CARD WITH CARD
+// function checkCard(e){
+//     var target = e.target;
+//     console.log(target)
+
+// }
+
+let score = 0;
+
+divArray[0].div.addEventListener("click",checkCardOne)
+
+
+function checkCardOne(){
+    if(divArray[0].div.textContent === findArray[0]||[1]||[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = "hello" 
+    }
+    else{
+        document.getElementById("scoreP").innerHTML = "wrong" 
+    }
+}
+// THIS IS HOW YOU WOULD DO IT IF YOU KNEW HOW TO USE TARGET.EVENT/ THIS THE OTHER WAY IS TO DO EACH AND EVERY ONE INDIVIDUALLY
+// function checkCard(){
+//     for(let i = 0; i < 13; i++){
+//         if(divArray[i].div.textContent === findArray[i].div.textContent)
+//     }
+// }
+
