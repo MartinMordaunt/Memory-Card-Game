@@ -62,6 +62,8 @@ h2{
     align-content:space-between;
 }
 .findZone{
+}
+.findParent{
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
