@@ -13,6 +13,8 @@ let bear = document.getElementById("bear");        let bearNum = 11;            
 let start = document.getElementById("start");
 let gameStatus = document.getElementById("gameStatus");
 
+
+// MAIN CARDS 
 let divArray = [
     {
         div: document.getElementById("one")
@@ -117,6 +119,7 @@ let animalNums = [
 
 ]
 
+// FIND CARDS
 let findArray = [ 
     {
        div: document.getElementById("findOne")
@@ -193,7 +196,7 @@ let findAnimalNums = [
 
 ]
 
-
+//SHUFFLE AND PUTTING CARDS IN PLACE
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
@@ -225,7 +228,7 @@ function shuffle(array) {
         divArray[i].div.append(animalNums[i].animal);
     }
 }
-// Same with this. Not working for some reason so we have to do it manually for time being
+// #2 Same with this. Not working for some reason so we have to do it manually for time being
 // function findCardsInPlace(){
 //     for(let i =0; i < 4; i++){
 //         findArray[i].div.append(findAnimalNums[i].animal);
@@ -237,7 +240,7 @@ function shuffle(array) {
      findArray[2].div.append(findAnimalNums[2].animal);
  }
 
-// Could not use this due to cannot read property of undefined error ;( 
+// #1 Could not use this due to cannot read property of undefined error ;( 
 // i think its something to do with the findArray because it works with divArray  
 // function clearFindDivs(){ 
 //     for(let i = 0; i < 4; i++){
@@ -245,7 +248,7 @@ function shuffle(array) {
 //     } 
 // }
 
-
+// START BUTTON FUNCTION
   start.addEventListener("click",startGame)
 let value = 10;
 function startGame(){
@@ -267,6 +270,7 @@ function startGame(){
         clearInterval(valueChange)
         clearInterval(updateValue)
     },10000)
+    start.removeEventListener('click', startGame)
 }
 
 // I THINK MAYBE E.TARGET MIGHT NEED TO BE USED FOR MATCHING CARD WITH CARD
@@ -276,18 +280,239 @@ function startGame(){
 
 // }
 
+
+// CREATING CARD MATCHING
 let score = 0;
 
 divArray[0].div.addEventListener("click",checkCardOne)
+divArray[1].div.addEventListener("click",checkCardTwo)
+divArray[2].div.addEventListener("click",checkCardThree)
+divArray[3].div.addEventListener("click",checkCardFour)
+divArray[4].div.addEventListener("click",checkCardFive)
+divArray[5].div.addEventListener("click",checkCardSix)
+divArray[6].div.addEventListener("click",checkCardSeven)
+divArray[7].div.addEventListener("click",checkCardEight)
+divArray[8].div.addEventListener("click",checkCardNine)
+divArray[9].div.addEventListener("click",checkCardTen)
+divArray[10].div.addEventListener("click",checkCardEleven)
+divArray[11].div.addEventListener("click",checkCardTwelve)
 
-
+// THIS IS CRAZY AND WAY TOO LONG NOT WORTH IT FIND OUT HOW TO LOOP THEM ALL TOGETHER IT SHOULD BE VERY SIMPLE 
 function checkCardOne(){
-    if(divArray[0].div.textContent === findArray[0]||[1]||[2].div.textContent){
+    if(animalNums[0].animal.textContent === findArray[0].div.textContent){  
         score += 1
-        document.getElementById("scoreP").innerHTML = "hello" 
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[0].animal.textContent === findArray[1].div.textContent){  
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[0].animal.textContent === findArray[2].div.textContent){  
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
-        document.getElementById("scoreP").innerHTML = "wrong" 
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardTwo(){
+    if(animalNums[1].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[1].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[1].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardThree(){
+    if(animalNums[2].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[2].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[2].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardFour(){
+    if(animalNums[3].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[3].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[3].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardFive(){
+    if(animalNums[4].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[4].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[4].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardSix(){
+    if(animalNums[5].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[5].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[5].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardSeven(){
+    if(animalNums[6].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[6].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[6].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardEight(){
+    if(animalNums[7].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[7].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[7].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardNine(){
+    if(animalNums[8].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[8].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[8].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardTen(){
+    if(animalNums[9].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    if(animalNums[9].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    if(animalNums[9].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+    console.log("iAmWolf")
+}
+function checkCardEleven(){
+    if(animalNums[10].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    if(animalNums[10].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    if(animalNums[10].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
+    }
+}
+function checkCardTwelve(){
+    if(animalNums[11].animal.textContent === findArray[0].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[11].animal.textContent === findArray[1].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else if(animalNums[11].animal.textContent === findArray[2].div.textContent){
+        score += 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}` 
+    }
+    else{
+        score -= 1
+        document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 // THIS IS HOW YOU WOULD DO IT IF YOU KNEW HOW TO USE TARGET.EVENT/ THIS THE OTHER WAY IS TO DO EACH AND EVERY ONE INDIVIDUALLY
