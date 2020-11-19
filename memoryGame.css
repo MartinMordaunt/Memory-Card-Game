@@ -92,3 +92,14 @@ h2{
     cursor: pointer;
     background:lightgreen;
 }
+#scoreP{
+    font-weight:bold;
+    font-size:5rem;
+}
+/* ANIMATE */
+
+.animate{
+    display:inline-block;
+    animation:flip;
+    animation-duration: 1s;
+}
