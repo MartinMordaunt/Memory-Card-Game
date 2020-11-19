@@ -1,18 +1,3 @@
-let fox = document.getElementById("fox");          let foxNum = 0;                 let divOne = document.getElementById("one");
-let rabbit = document.getElementById("rabbit");    let rabbitNum = 1;              let divTwo = document.getElementById("two");
-let frog = document.getElementById("frog");        let frogNum = 2;                let divThree = document.getElementById("three");
-let lion = document.getElementById("lion");        let lionNum = 3;                let divFour = document.getElementById("four");
-let tiger = document.getElementById("tiger");      let tigerNum = 4;               let divFive = document.getElementById("five");
-let mouse = document.getElementById("mouse");      let mouseNum = 5;               let divSix = document.getElementById("six");
-let unicorn = document.getElementById("unicorn");  let unicornNum = 6;             let divSeven = document.getElementById("seven");
-let dragon = document.getElementById("dragon");    let dragonNum = 7;              let divEight = document.getElementById("eight");
-let pig = document.getElementById("pig");          let pigNum = 8;                 let divNine = document.getElementById("nine");
-let wolf = document.getElementById("wolf");        let wolfNum = 9;                let divTen = document.getElementById("ten"); 
-let panda = document.getElementById("panda");      let pandaNum = 10;              let divEleven = document.getElementById("eleven");
-let bear = document.getElementById("bear");        let bearNum = 11;               let divTwelve = document.getElementById("twelve");
-let start = document.getElementById("start");
-let gameStatus = document.getElementById("gameStatus");
-
 
 // MAIN CARDS 
 let divArray = [
@@ -257,7 +242,7 @@ function startGame(){
     findArray[0].div.innerHTML = "";
     findArray[1].div.innerHTML = "";
     findArray[2].div.innerHTML = "";
-    setTimeout(function(){
+    let cardDisplay = setTimeout(function(){
         shuffle(findAnimalNums);
         findCardsInPlace();
         for(i = 0; i < animalNums.length; i++){
@@ -299,218 +284,385 @@ divArray[11].div.addEventListener("click",checkCardTwelve)
 
 // THIS IS CRAZY AND WAY TOO LONG NOT WORTH IT FIND OUT HOW TO LOOP THEM ALL TOGETHER IT SHOULD BE VERY SIMPLE 
 function checkCardOne(){
-    if(animalNums[0].animal.textContent === findArray[0].div.textContent){  
+    if(animalNums[0].animal.textContent === findArray[0].div.textContent){
+        animalNums[0].animal.style.display = "block"
+        animalNums[0].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
-    else if(animalNums[0].animal.textContent === findArray[1].div.textContent){  
+    else if(animalNums[0].animal.textContent === findArray[1].div.textContent){
+        animalNums[0].animal.style.display = "block"
+        animalNums[0].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
-    else if(animalNums[0].animal.textContent === findArray[2].div.textContent){  
+    else if(animalNums[0].animal.textContent === findArray[2].div.textContent){
+        animalNums[0].animal.style.display = "block"
+        animalNums[0].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[0].animal.style.display = "block"
+        animalNums[0].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[0].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardTwo(){
     if(animalNums[1].animal.textContent === findArray[0].div.textContent){
+        animalNums[1].animal.style.display = "block"
+        animalNums[1].animal.classList.add("animate");
+        setTimeout(function(){animalNums[1].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[1].animal.textContent === findArray[1].div.textContent){
+        animalNums[1].animal.style.display = "block"
+        animalNums[1].animal.classList.add("animate");
+        setTimeout(function(){animalNums[1].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[1].animal.textContent === findArray[2].div.textContent){
+        animalNums[1].animal.style.display = "block"
+        animalNums[1].animal.classList.add("animate");
+        setTimeout(function(){animalNums[1].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[1].animal.style.display = "block"
+        animalNums[1].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[1].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardThree(){
     if(animalNums[2].animal.textContent === findArray[0].div.textContent){
+        animalNums[2].animal.style.display = "block"
+        animalNums[2].animal.classList.add("animate");
+        setTimeout(function(){animalNums[2].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[2].animal.textContent === findArray[1].div.textContent){
+        animalNums[2].animal.style.display = "block"
+        animalNums[2].animal.classList.add("animate");
+        setTimeout(function(){animalNums[2].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[2].animal.textContent === findArray[2].div.textContent){
+        animalNums[2].animal.style.display = "block"
+        animalNums[2].animal.classList.add("animate");
+        setTimeout(function(){animalNums[2].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[2].animal.style.display = "block"
+        animalNums[2].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[2].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardFour(){
     if(animalNums[3].animal.textContent === findArray[0].div.textContent){
+        animalNums[3].animal.style.display = "block"
+        animalNums[3].animal.classList.add("animate");
+        setTimeout(function(){animalNums[3].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[3].animal.textContent === findArray[1].div.textContent){
+        animalNums[3].animal.style.display = "block"
+        animalNums[3].animal.classList.add("animate");
+        setTimeout(function(){animalNums[3].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[3].animal.textContent === findArray[2].div.textContent){
+        animalNums[3].animal.style.display = "block"
+        animalNums[3].animal.classList.add("animate");
+        setTimeout(function(){animalNums[3].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[3].animal.style.display = "block"
+        animalNums[3].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[3].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardFive(){
     if(animalNums[4].animal.textContent === findArray[0].div.textContent){
+        animalNums[4].animal.style.display = "block"
+        animalNums[4].animal.classList.add("animate");
+        setTimeout(function(){animalNums[4].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[4].animal.textContent === findArray[1].div.textContent){
+        animalNums[4].animal.style.display = "block"
+        animalNums[4].animal.classList.add("animate");
+        setTimeout(function(){animalNums[4].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[4].animal.textContent === findArray[2].div.textContent){
+        animalNums[4].animal.style.display = "block"
+        animalNums[4].animal.classList.add("animate");
+        setTimeout(function(){animalNums[4].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[4].animal.style.display = "block"
+        animalNums[4].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[4].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardSix(){
     if(animalNums[5].animal.textContent === findArray[0].div.textContent){
+        animalNums[5].animal.style.display = "block"
+        animalNums[5].animal.classList.add("animate");
+        setTimeout(function(){animalNums[5].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[5].animal.textContent === findArray[1].div.textContent){
+        animalNums[5].animal.style.display = "block"
+        animalNums[5].animal.classList.add("animate");
+        setTimeout(function(){animalNums[5].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[5].animal.textContent === findArray[2].div.textContent){
+        animalNums[5].animal.style.display = "block"
+        animalNums[5].animal.classList.add("animate");
+        setTimeout(function(){animalNums[5].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[5].animal.style.display = "block"
+        animalNums[5].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[5].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardSeven(){
     if(animalNums[6].animal.textContent === findArray[0].div.textContent){
+        animalNums[6].animal.style.display = "block"
+        animalNums[6].animal.classList.add("animate");
+        setTimeout(function(){animalNums[6].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[6].animal.textContent === findArray[1].div.textContent){
+        animalNums[6].animal.style.display = "block"
+        animalNums[6].animal.classList.add("animate");
+        setTimeout(function(){animalNums[6].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[6].animal.textContent === findArray[2].div.textContent){
+        animalNums[6].animal.style.display = "block"
+        animalNums[6].animal.classList.add("animate");
+        setTimeout(function(){animalNums[6].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[6].animal.style.display = "block"
+        animalNums[6].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[6].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardEight(){
     if(animalNums[7].animal.textContent === findArray[0].div.textContent){
+        animalNums[7].animal.style.display = "block"
+        animalNums[7].animal.classList.add("animate");
+        setTimeout(function(){animalNums[7].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[7].animal.textContent === findArray[1].div.textContent){
+        animalNums[7].animal.style.display = "block"
+        animalNums[7].animal.classList.add("animate");
+        setTimeout(function(){animalNums[7].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[7].animal.textContent === findArray[2].div.textContent){
+        animalNums[7].animal.style.display = "block"
+        animalNums[7].animal.classList.add("animate");
+        setTimeout(function(){animalNums[7].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[7].animal.style.display = "block"
+        animalNums[7].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[7].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardNine(){
     if(animalNums[8].animal.textContent === findArray[0].div.textContent){
+        animalNums[8].animal.style.display = "block"
+        animalNums[8].animal.classList.add("animate");
+        setTimeout(function(){animalNums[8].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[8].animal.textContent === findArray[1].div.textContent){
+        animalNums[8].animal.style.display = "block"
+        animalNums[8].animal.classList.add("animate");
+        setTimeout(function(){animalNums[8].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[8].animal.textContent === findArray[2].div.textContent){
+        animalNums[8].animal.style.display = "block"
+        animalNums[8].animal.classList.add("animate");
+        setTimeout(function(){animalNums[8].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[8].animal.style.display = "block"
+        animalNums[8].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[8].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardTen(){
     if(animalNums[9].animal.textContent === findArray[0].div.textContent){
+        animalNums[9].animal.style.display = "block"
+        animalNums[9].animal.classList.add("animate");
+        setTimeout(function(){animalNums[9].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     if(animalNums[9].animal.textContent === findArray[1].div.textContent){
+        animalNums[9].animal.style.display = "block"
+        animalNums[9].animal.classList.add("animate");
+        setTimeout(function(){animalNums[9].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     if(animalNums[9].animal.textContent === findArray[2].div.textContent){
+        animalNums[9].animal.style.display = "block"
+        animalNums[9].animal.classList.add("animate");
+        setTimeout(function(){animalNums[9].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[9].animal.style.display = "block"
+        animalNums[9].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[9].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
-    console.log("iAmWolf")
 }
 function checkCardEleven(){
     if(animalNums[10].animal.textContent === findArray[0].div.textContent){
+        animalNums[10].animal.style.display = "block"
+        animalNums[10].animal.classList.add("animate");
+        setTimeout(function(){animalNums[10].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     if(animalNums[10].animal.textContent === findArray[1].div.textContent){
+        animalNums[10].animal.style.display = "block"
+        animalNums[10].animal.classList.add("animate");
+        setTimeout(function(){animalNums[10].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     if(animalNums[10].animal.textContent === findArray[2].div.textContent){
+        animalNums[10].animal.style.display = "block"
+        animalNums[10].animal.classList.add("animate");
+        setTimeout(function(){animalNums[10].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[10].animal.style.display = "block"
+        animalNums[10].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[10].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
 }
 function checkCardTwelve(){
     if(animalNums[11].animal.textContent === findArray[0].div.textContent){
+        animalNums[11].animal.style.display = "block"
+        animalNums[11].animal.classList.add("animate");
+        setTimeout(function(){animalNums[11].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[11].animal.textContent === findArray[1].div.textContent){
+        animalNums[11].animal.style.display = "block"
+        animalNums[11].animal.classList.add("animate");
+        setTimeout(function(){animalNums[11].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else if(animalNums[11].animal.textContent === findArray[2].div.textContent){
+        animalNums[11].animal.style.display = "block"
+        animalNums[11].animal.classList.add("animate");
+        setTimeout(function(){animalNums[11].animal.classList.remove("animate");},1001)
         score += 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}` 
     }
     else{
+        animalNums[11].animal.style.display = "block"
+        animalNums[11].animal.classList.add("animate");
+        setTimeout(function(){animalNums[0].animal.classList.remove("animate");
+        animalNums[11].animal.style.display = "none";},1001
+        )
         score -= 1
         document.getElementById("scoreP").innerHTML = `Score: ${score}`
     }
