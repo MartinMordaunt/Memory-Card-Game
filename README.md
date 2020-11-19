@@ -8,6 +8,7 @@ so I will have to come back and refine/refacter the code
 
 To Do's:
 
+* remove repititon/ put card matching into one function (instead of twelve... 😕)
 * re-code
 * Improved CSS/Design
 * A Score Board/ Tally of points(times you guessed the right card)
