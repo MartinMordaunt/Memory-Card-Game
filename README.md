@@ -11,7 +11,7 @@ To Do's:
 * remove repititon/ put card matching into one function (instead of twelve... 😕)
 * re-code
 * Improved CSS/Design
-* A Score Board/ Tally of points(times you guessed the right card)
 * A difficulty setting/button that will change the amount of time to see where the cards are placed
+* Restart Button
 * Make Responsive
 
